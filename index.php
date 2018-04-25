@@ -11,6 +11,16 @@
         return $key;
     }
 
+    // Creazione cartella
+
+    $folder_name = random_string(7);
+
+    if (!file_exists('uploads/' . $folder_name)) {
+        mkdir('uploads/' . $folder_name, 0777, true);
+    }
+
+    // Salvare files con zip
+
     $ds = DIRECTORY_SEPARATOR;
     $storeFolder = 'uploads';
 

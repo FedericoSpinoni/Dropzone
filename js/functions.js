@@ -3,7 +3,7 @@ var files = [];
 var myDropzone = new Dropzone(
     "#my-awesome-dropzone",
     {
-        url: "./caza.php",
+        url: "./index.php",
         autoProcessQueue: false,
         maxFiles: 100,
         addRemoveLinks: true,
