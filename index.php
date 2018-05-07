@@ -20,37 +20,16 @@
     }
 
     // Upload files
-    // $ds = DIRECTORY_SEPARATOR;
-    // $storeFolder = 'uploads';
-    // if (!empty($_FILES)) {
-    //     foreach ($_FILES['file'] as $file) {
-    //         $tempFile = $_FILES['file']['tmp_name'];           
-    //         $targetFile =  $targetPath . $_FILES['file']['name'][$file];
-    //         $fileName = $_FILES['file']['name'];
-    //         move_uploaded_file($tempFile, $targetFile);
-    //     }
-    // }
+    $total = count($_FILES['file']['name']);
 
-    // Zip files
+    for($i=0; $i<$total; $i++) {
+        $tmpFilePath = $_FILES['file']['tmp_name'][$i];
+        if ($tmpFilePath != ""){
+            $newFilePath = "./uploads/" . $folder_name . '/' . $_FILES['file']['name'][$i];
+            if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+                // Log Error
+            }
+        }
+    }
 
-    // $ds = DIRECTORY_SEPARATOR;
-    // $storeFolder = 'uploads';
-
-    // if (!empty($_FILES)) {
-    //     $archive_name = random_string(7);
-    //     $zip = new ZipArchive();
-    //     $targetPath = $storeFolder . $ds;
-    //     if ($zip->open($targetPath . $archive_name . '.zip', ZipArchive::CREATE) === TRUE) {
-    //         foreach ($_FILES['file'] as $file) {
-    //             $tempFile = $_FILES['file']['tmp_name'];           
-    //             $targetFile =  $targetPath . $_FILES['file']['name'];
-    //             $fileName = $_FILES['file']['name'];
-    //             move_uploaded_file($tempFile, $targetFile);
-                
-    //             $zip->addFile($targetFile, $archive_name . '/' . $fileName);
-    //             // unlink("uploads/" . $fileName);
-    //         }
-    //         $zip->close();
-    //     }
-    // }
 ?>
