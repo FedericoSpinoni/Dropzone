@@ -1,15 +1,40 @@
 /* ========================================== */
 
-.dropzone2 {
+body {
+    margin: 0;
+}
+
+.dropzone-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.dropzone-previews-container {
     width: 200px;
     height: 300px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    position: absolute;
+    overflow-y: scroll;
     top: 50%;
     left: 10%;
+    position: absolute;
     transform: translate(0, -50%);
-    overflow-y: scroll;
+}
+
+#submit {
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    border: 1px solid #aaa;
+    background-color: #ddd;
 }
 
 .dz-success-mark {

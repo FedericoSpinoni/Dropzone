@@ -9,6 +9,7 @@ var myDropzone = new Dropzone(
         maxFiles: 100,
         addRemoveLinks: true,
         parallelUploads: 100,
+        previewsContainer: ".dropzone-previews-container",
         init: function () {
             document.getElementById("submit").addEventListener("click", function (e) {
                 e.preventDefault();

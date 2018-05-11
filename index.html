@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <form action="/index.php" class="dropzone2" id="my-awesome-dropzone">
+    <form action="/index.php" class="dropzone-container" id="my-awesome-dropzone">
         <div class="dz-message"></div>
         <div class="fallback">
             <input name="file[]" type="file" multiple />
         </div>
-        <button id="submit">Submit</buttom>
+        <button id="submit">Submit</button>
     </form>
+    <div class="dropzone-previews-container"></div>
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="./js/dropzone.js"></script>
     <script src="./js/functions.js"></script>
 </body>
+
 </html>
